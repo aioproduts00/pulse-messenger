@@ -1,0 +1,10 @@
+{
+  "name": "PulseFlow Messenger",
+  "description": "Production-ready, secure real-time messaging application with groups, voice and video calling architecture, encrypted chats, media sharing, and status updates.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone",
+    "notifications"
+  ],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

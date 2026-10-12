@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="50%" stop-color="#0f2b2b"/>
+      <stop offset="100%" stop-color="#042f2e"/>
+    </linearGradient>
+    <linearGradient id="pulseGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2dd4bf"/>
+      <stop offset="50%" stop-color="#14b8a6"/>
+      <stop offset="100%" stop-color="#06b6d4"/>
+    </linearGradient>
+    <linearGradient id="glowGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#34d399"/>
+      <stop offset="100%" stop-color="#0ea5e9"/>
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="16" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+  <rect width="512" height="512" rx="128" fill="url(#bgGrad)"/>
+  
+  <!-- Outer subtle pulse ring -->
+  <circle cx="256" cy="256" r="190" fill="none" stroke="#14b8a6" stroke-width="4" stroke-opacity="0.2" stroke-dasharray="12 12" />
+  
+  <!-- Chat Bubble with Pulse Wave -->
+  <g filter="url(#glow)">
+    <!-- Speech bubble body -->
+    <path d="M 130 240 C 130 168, 186 112, 256 112 C 326 112, 382 168, 382 240 C 382 312, 326 368, 256 368 C 224 368, 195 356, 172 336 L 120 354 L 138 304 C 133 284, 130 262, 130 240 Z" 
+          fill="none" stroke="url(#pulseGrad)" stroke-width="26" stroke-linecap="round" stroke-linejoin="round"/>
+          
+    <!-- Dynamic audio/pulse wave in center -->
+    <path d="M 190 240 L 222 240 L 238 184 L 256 296 L 274 212 L 290 256 L 302 240 L 322 240" 
+          fill="none" stroke="url(#glowGrad)" stroke-width="20" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  
+  <!-- Ambient live status node -->
+  <circle cx="362" cy="148" r="18" fill="#10b981" />
+  <circle cx="362" cy="148" r="30" fill="none" stroke="#34d399" stroke-width="4" stroke-opacity="0.5"/>
+</svg>
